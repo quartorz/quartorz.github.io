@@ -2,7 +2,9 @@ ul#list {
   list-style-type: none;
   padding-left: 0;
 }
-
 #item {
+  display: none;
+}
+#canvas {
   display: none;
 }

@@ -7,8 +7,6 @@
     }
   }
 
-  let canvas = null;
-
   document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('list');
     const item = document.getElementById('item');
@@ -28,6 +26,8 @@
     const shuffleLabels = document.getElementById('shuffle-labels');
 
     const gen = document.getElementById('generate');
+    const canvas = document.getElementById('canvas');
+    const image = document.getElementById('image');
     gen.addEventListener('click', () => {
       const labels = [...list.getElementsByClassName('label')].map(v => v.value);
       const results = [...list.getElementsByClassName('result')].map(v => v.value);
@@ -36,9 +36,10 @@
         numOfSwap: parseInt(numOfSwapElem.value),
         shuffleLabels: shuffleLabels.checked,
       });
+      image.removeAttribute('style');
+      image.src = canvas.toDataURL();
     });
 
-    canvas = document.getElementById('image');
   });
 
   function generateAmida(canvas, labels, results, configs) {
@@ -151,6 +152,5 @@
     });
 
     ctx.restore();
-    return canvas;
   }
 })();
