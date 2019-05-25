@@ -47,8 +47,8 @@
     const numOfSwap = configs.numOfSwap || 10;
     const shuffleLabels = !!configs.shuffleLabels;
     const font = `${fontSize}px Sans Serif`;
-    const padding = fontSize * 3.333;
-    const cellHeight = 20;
+    const padding = fontSize * 3.3333;
+    const cellHeight = fontSize * 1.3333;
     let lineLength = 0;
 
     canvas.width = 0;
