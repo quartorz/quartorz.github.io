@@ -1,0 +1,50 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>出来レースあみだ</title>
+    <script src="amida.js"></script>
+    <link rel="stylesheet" href="amida.css">
+  </head>
+  <body>
+    <ul id="list">
+        <div>
+            ラベル：<input class="label" type="text" value="a">
+            結果：<input class="result" type="text" value="a">
+            <button class="remove">削除</button>
+          </div><div>
+            ラベル：<input class="label" type="text" value="b">
+            結果：<input class="result" type="text" value="b">
+            <button class="remove">削除</button>
+          </div><div>
+            ラベル：<input class="label" type="text" value="c">
+            結果：<input class="result" type="text" value="c">
+            <button class="remove">削除</button>
+          </div><div>
+            ラベル：<input class="label" type="text" value="d">
+            結果：<input class="result" type="text" value="d">
+            <button class="remove">削除</button>
+          </div><div>
+            ラベル：<input class="label" type="text" value="e">
+            結果：<input class="result" type="text" value="e">
+            <button class="remove">削除</button>
+          </div><div>
+            ラベル：<input class="label" type="text" value="f">
+            結果：<input class="result" type="text" value="f">
+            <button class="remove">削除</button>
+          </div>
+      <button id="add-data">データ追加</button>
+    </ul>
+    <div>
+      <div>横線の数：<input id="numofswap" type="number" min="0" value="30"></div>
+      <div>フォントサイズ：<input id="fontsize" type="number" min="0" value="15"></div>
+      <div><input id="shuffle-labels" type="checkbox" checked><label for="shuffle-labels">ラベルをシャッフルする</label></div>
+      <button id="generate">生成</button>
+    </div>
+    <canvas id="image"></canvas>
+    <div id="item">
+      ラベル：<input class="label" type="text">
+      結果：<input class="result" type="text">
+      <button class="remove">削除</button>
+    </div>
+  </body>
+</html>
