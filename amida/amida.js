@@ -1,12 +1,6 @@
 (() => {
   'use strict';
 
-  class Data {
-    constructor(divElm) {
-
-    }
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('list');
     const item = document.getElementById('item');
@@ -39,7 +33,6 @@
       image.removeAttribute('style');
       image.src = canvas.toDataURL();
     });
-
   });
 
   function generateAmida(canvas, labels, results, configs) {
@@ -104,7 +97,6 @@
             continue;
           }
           [labelSwap[swap1], labelSwap[swap2]] = [labelSwap[swap2], labelSwap[swap1]];
-          // [resultSwap[swap1], resultSwap[swap2]] = [resultSwap[swap2], resultSwap[swap1]];
         }
       }
     } else if (labels.length === 2) {
@@ -144,11 +136,11 @@
     ctx.save();
     ctx.rotate(Math.PI / 2);
 
-    labels.forEach((v, groupIdx) => {
-      ctx.fillText(labels[labelSwap[groupIdx]], 0, -padding * groupIdx - fontSize / 3);
+    labels.forEach((_, i) => {
+      ctx.fillText(labels[labelSwap[i]], 0, -padding * i - fontSize / 3);
     });
-    resultSwap.forEach((v, groupIdx) => {
-      ctx.fillText(results[labelSwap[v]], labelWidth + lineLength + 5, -padding * groupIdx - fontSize / 3);
+    resultSwap.forEach((v, i) => {
+      ctx.fillText(results[labelSwap[v]], labelWidth + lineLength + 5, -padding * i - fontSize / 3);
     });
 
     ctx.restore();

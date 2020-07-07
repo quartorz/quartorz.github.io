@@ -1,0 +1,116 @@
+/* IMPORT RESET */
+@import url("reset.css");
+
+/* IMPORT 12 COLUMN RESPONSIVE GS */
+@import url("responsive.gs.12col.css");
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/*	EXAMPLE STYLES */
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	color: white;
+	width: 100%;
+	height: 100%;
+	background: #eee;
+}
+
+header {
+	line-height: 2em;
+	text-align: left;
+	background: #333;
+	letter-spacing: -0.4em;
+	width: 100vw;
+}
+
+article {
+	padding: 1em;
+	text-align: left;
+	/*background: #666;*/
+	color: #000;
+}
+
+aside {
+	line-height: 20em;
+	text-align: center;
+	background: #999;
+}
+
+footer {
+	line-height: 1em;
+	text-align: center;
+	background: #BBB;
+}
+
+a {
+	color: #777;
+}
+
+dd {
+	margin-left: 1em;
+}
+
+#title {
+	letter-spacing: normal;
+	font-family: 'Courier New', Courier, monospace;
+	padding-left: 1em;
+	padding-right: 0.5em;
+}
+
+#header-menu-container,
+#header-menu-container li,
+#header-menu {
+	display: inline;
+}
+
+#header-menu-toggle-label {
+	letter-spacing: normal;
+	display: none;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	padding-top: calc(0.5em - 1px);
+	padding-bottom: calc(0.5em - 1px);
+}
+
+#header-menu-toggle {
+	display: none;
+}
+
+a.header-button {
+	letter-spacing: normal;
+	display: inline-block;
+	font-size: 1em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	text-decoration: none;
+	color: #fff;
+}
+
+.header-button:hover {
+	color: #f0f0f0;
+	background: #555;
+}
+
+#header-menu-toggle:checked + #header-menu-toggle-label,
+.header-button:active {
+	color: #fff;
+	background: #222;
+}
+
+@media only screen and (max-width: 768px) {
+	#header-menu-toggle-label {
+		display: inline;
+	}
+
+	#header-menu-toggle ~ #header-menu {
+		display: none;
+	}
+
+	#header-menu-toggle:checked ~ #header-menu {
+		display: block;
+	}
+
+	#header-menu {
+		background: #444;
+	}
+}
